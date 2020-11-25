@@ -3,10 +3,7 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh '''find / -type f -name \'nosetests*\' -perm +111 -print -quit
-
-pip install -r requirements.txt
-
+        sh '''
 nosetest tests
 tree'''
       }
