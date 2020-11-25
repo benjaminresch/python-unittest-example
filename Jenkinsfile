@@ -3,7 +3,9 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh '''nosetest tests
+        sh '''pip install -r requirements.txt
+
+nosetest tests
 tree'''
       }
     }
