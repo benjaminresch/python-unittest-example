@@ -4,7 +4,7 @@ pipeline {
     stage('Test') {
       steps {
         sh '''
-nosetests tests
+nosetests --with-xunit tests
 tree'''
       }
     }
