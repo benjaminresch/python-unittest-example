@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('Test') {
       steps {
-        sh 'tree'
+        sh 'pip install -r requirements.txt'
       }
     }
 
