@@ -3,7 +3,14 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh 'pip install -r requirements.txt'
+        sh '''nosetest tests
+tree'''
+      }
+    }
+
+    stage('clean') {
+      steps {
+        cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, deleteDirs: true)
       }
     }
 
