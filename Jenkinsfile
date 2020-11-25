@@ -4,7 +4,7 @@ pipeline {
     stage('Test') {
       steps {
         sh '''
-nosetest tests
+nosetests tests
 tree'''
       }
     }
