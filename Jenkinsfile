@@ -1,4 +1,6 @@
 pipeline {
+
+
   agent any
   stages {
     stage('Test') {
@@ -17,4 +19,8 @@ tree'''
     }
 
   }
+  
+triggers {
+    pollSCM('* * * * *')
+}
 }
